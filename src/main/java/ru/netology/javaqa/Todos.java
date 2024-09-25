@@ -1,7 +1,6 @@
 package ru.netology.javaqa;
 
 public class Todos {
-
     private Task[] tasks = new Task[0]; // <- тут будут все задачи
 
     private Task[] addToArray(Task[] current, Task task) {
@@ -12,6 +11,7 @@ public class Todos {
         tmp[tmp.length - 1] = task;
         return tmp;
     }
+
 
     public void add(Task task) { // <- вот здесь в параметре может лежать объект и вида SimpleTask, и вида Epic, и вида Meeting
         tasks = addToArray(tasks, task);
